@@ -2,6 +2,7 @@ package day06_JUnitFrameWork;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.WebDriverManagerException;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +26,7 @@ public class C01_TestNotasyonu {
      hamgi siralama ile calistigini ongoremeyiz ve yonetemeyiz
      */
     WebDriver driver;
-    @Test
+    @Test @Ignore
     public void googleTest(){
      mahserin4Atlisi();
      driver.get("https://www.google.com");
@@ -57,10 +58,6 @@ public class C01_TestNotasyonu {
      driver.close();
    }
 
-
-
-
-
     @Test
     public void amazonTest(){
      mahserin4Atlisi();
@@ -78,8 +75,6 @@ public class C01_TestNotasyonu {
 
 
    }
-
-
 
   public void  mahserin4Atlisi(){
         WebDriverManager.chromedriver().setup();
