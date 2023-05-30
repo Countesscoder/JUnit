@@ -25,6 +25,7 @@ public class C05_Assertions {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.bestbuy.com");
+
     }
     @Test
     public void test01(){
@@ -35,7 +36,7 @@ public class C05_Assertions {
      String actualUrl=driver.getCurrentUrl();
 
      Assert.assertEquals(expectedUrl,actualUrl);
-
+     driver.close();
     }
     @Test
     public void test02(){
@@ -45,7 +46,7 @@ public class C05_Assertions {
       String actualTitle=driver.getTitle();
 
       Assert.assertFalse(actualTitle.contains(unExpectedIcerik));
-
+      driver.close();
 
     }
 
